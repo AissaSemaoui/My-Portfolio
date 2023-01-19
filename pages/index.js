@@ -39,24 +39,25 @@ export default function Home() {
               <SecondaryButton>Let's Chat</SecondaryButton>
             </div>
           </nav>
-          <div className="hero py-6 relative">
-            <div className="hero-wrapper flex justify-between">
-              <div className="hero-content relative">
-                <div className="absolute bottom-1/2 translate-y-1/2 left-0 w-[50vw] z-10">
-                  <h1 className="text-8xl font-bold mb-8">
+          <div className="hero relative w-full">
+            <div className="hero-wrapper relative h-full w-full flex flex-col xl:flex-row justify-around gap-4 items-center text-center xl:text-left">
+              <div className="hero-content xl:w-1/2">
+                <div className="xl:w-1/2 2xl:w-2/3 z-10 xl:absolute left-0 top-1/2 xl:-translate-y-1/2">
+                  <h1 className="leading-tight mb-4">
                     I design and develop websites that converts
                   </h1>
                   <PrimaryButton>Get in touch</PrimaryButton>
                 </div>
               </div>
-              <div className="hero-image w-max h-max pr-10 relative">
+              <div className="hero-image relative">
                 <Tilt transitionSpeed={800}>
-                  <div className="relative w-[600px] h-[650px] bg-gray-300"></div>
-                  <div className="heroImage">
+                  <div className="absolute left-1/2 bottom-0 -translate-x-1/2 bg-gray-200 h-[400px] xl:h-[550px] w-[600px] xl:w-[600px]"></div>
+                  <div className="heroImage h-[500px] xl:h-[600px] w-[600px] xl:w-[700px]">
                     <Image
                       src={myHeroImage}
                       layout="fill"
                       objectFit="contain"
+                      className=""
                     />
                   </div>
                 </Tilt>
@@ -65,18 +66,10 @@ export default function Home() {
             <Line />
           </div>
         </header>
-        <div className="about-me section flex gap-8 mt-8">
-          <Image
-            src={aboutImage}
-            className="flex-1
-          "
-            width={600}
-            height={700}
-            objectFit="cover"
-          />
-          <div className="about-content max-w-3xl flex-1 flex flex-col gap-6 my-auto">
-            <h2>ABOUT ME</h2>
-            <p>
+        <div className="about-me section flex flex-col-reverse  gap-8 mt-8">
+          <div className="about-content flex-1 flex flex-col  my-auto">
+            <h2 className="mb-2">ABOUT ME</h2>
+            <p className="font-regular mb-8 xl:mb-6">
               I'm Aissa, a Frontend Developer with extensive experience in web
               development. I have a knack for creating projects from scratch,
               and have built several projects for both business and pleasure. My
@@ -101,12 +94,37 @@ export default function Home() {
           <Special />
           <Line tailwindRotation="rotate-1" />
         </div>
-        <div className="section text-center">
+        <div className="section text-center ">
           <div>
             <h3 className="text-blue-light">HERE IS THE GOOD PART</h3>
-            <h2>SOME OF MY RECENT WORKS</h2>
+            <h2 className="mb-6">SOME OF MY RECENT WORKS</h2>
           </div>
-          <Portfolio />
+          <div className="relative">
+            <Portfolio />
+          </div>
+        </div>
+        <div className="h-72">
+          <div className="h-72 flex flex-col gap-4 justify-center items-center w-screen absolute left-1/2 -translate-x-1/2 text-center bg-blue-light">
+            <h2 className="text-white">Let's get to wrok together !</h2>
+            <PrimaryButton className=" text-blue-dark font-bold bg-light hover:bg-gray-100 active:bg-white">
+              Get in touch
+            </PrimaryButton>
+            <Line
+              tailwindRotation="-rotate-1"
+              className="z-50 bg-light text-dark "
+              textClass="text-dark"
+            />
+          </div>
+        </div>
+        <div className="flex -z-10 items-center justify-between px-[20%] h-44 w-screen absolute left-1/2 -translate-x-1/2 bg-blue ">
+          <div className="logo ">
+            <Image src={logo} width="100%" height="40px" />
+          </div>
+          <nav className="flex gap-4">
+            <span className="text-white">Work</span>
+            <span className="text-white">Contact</span>
+            <span className="text-white">My skills</span>
+          </nav>
         </div>
       </main>
     </div>

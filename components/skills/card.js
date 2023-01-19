@@ -55,7 +55,7 @@ function Skills() {
 
   return (
     <div className="pt-8">
-      <div className="flex mb-4 w-full justify-between">
+      <div className="flex mb-4 w-full justify-center gap-4 flex-wrap">
         {mainTechs.map((tech) => (
           <PrimaryCard
             name={tech.name}
@@ -65,7 +65,7 @@ function Skills() {
           />
         ))}
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 justify-center flex-wrap">
         {subTechs.map((tech) => (
           <SecondaryCard name={tech.name} img={tech.img} key={tech.name} />
         ))}
@@ -78,8 +78,8 @@ export function PrimaryCard({ name, img, isMain }) {
   return (
     <div
       className={`${
-        isMain ? "border border-blue-light " : ""
-      } text-center w-48 p-4 rounded-md shadow-sm bg-white`}
+        isMain ? "border border-gray-200 " : ""
+      } text-center w-48 p-4 rounded-md shadow-sm hover:shadow-md duration-75 bg-white`}
     >
       <Image src={img} width={130} height={130} objectFit="contain" />
       <h3>{name}</h3>

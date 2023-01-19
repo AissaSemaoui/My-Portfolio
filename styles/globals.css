@@ -20,8 +20,13 @@
 
 /* ---------------------------------- Text sizes --------------------------------- */
 
+h1 {
+  font-size: 72px;
+  font-weight: 900;
+}
+
 h2 {
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 600;
 }
 
@@ -31,12 +36,12 @@ h3 {
 }
 
 p {
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 * {
-  font-family: "Satochi", sans-serif;
+  font-family: "Satoshi", sans-serif;
   box-sizing: border-box;
   color: var(--blue-dark);
 }
@@ -54,17 +59,10 @@ body {
 }
 
 .section {
-  margin-bottom: 140px;
+  margin-bottom: 100px;
 }
 
 .heroImage {
-  width: 800px;
-  height: 700px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform-origin: center;
-  transform: translate(-50%, -50%);
 }
 .heroImage img {
   filter: drop-shadow(50);
@@ -80,15 +78,33 @@ body {
 
 /* ------------------------------ Media Queries ----------------------------- */
 
-@media only screen and (min-width: "1024px") {
-  .container {
-    padding: 0 80px;
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 64px;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  .section {
+    margin-bottom: 100px;
   }
 }
 
-@media only screen and (min-width: "768px") {
+@media only screen and (max-width: 760px) {
+  h1 {
+    font-size: 56px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  h1 {
+    font-size: 44px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
   .container {
-    padding: 0 40px;
+    padding: 0 80px;
   }
 }
 

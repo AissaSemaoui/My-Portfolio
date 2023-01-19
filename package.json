@@ -12,7 +12,9 @@
     "next": "^12.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-parallax-tilt": "^1.7.77"
+    "react-parallax-tilt": "^1.7.77",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

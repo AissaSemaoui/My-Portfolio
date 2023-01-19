@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-function Line({ tailwindRotation = "-rotate-2" }) {
+function Line({ tailwindRotation = "-rotate-2", className, textClass }) {
   const lineRef = useRef(null);
 
   const fillLine = (e, index) => {
@@ -36,7 +36,7 @@ function Line({ tailwindRotation = "-rotate-2" }) {
 
   return (
     <div
-      className={`absolute translate-y-1/2  -translate-x-1/2 bottom-0 left-1/2 w-[105vw] h-20  bg-blue text-white ${tailwindRotation}`}
+      className={`absolute z-10 translate-y-1/2 -translate-x-1/2 bottom-0 left-1/2 w-[105vw] h-20 bg-blue text-white ${tailwindRotation} ${className}`}
     >
       <div
         className="line-wrapper h-full w-[200vw] whitespace-nowrap gap-8 flex justify-between items-center"
@@ -44,7 +44,9 @@ function Line({ tailwindRotation = "-rotate-2" }) {
       >
         {Array.from({ length: 20 }, fillLine).map((content) => {
           return (
-            <span className="font-semibold text-2xl text-white">{content}</span>
+            <span className={`font-semibold text-2xl text-white ${textClass}`}>
+              {content}
+            </span>
           );
         })}
       </div>
