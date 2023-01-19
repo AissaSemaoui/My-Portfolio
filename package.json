@@ -22,5 +22,18 @@
     "eslint-config-next": "13.0.7",
     "postcss": "^8.4.20",
     "tailwindcss": "^3.2.4"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aissa0347/Official-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aissa0347/Official-Portfolio/issues"
+  },
+  "homepage": "https://github.com/Aissa0347/Official-Portfolio#readme"
 }
