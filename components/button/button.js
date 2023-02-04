@@ -38,7 +38,7 @@ export function ThirdButton({ children, className, ...rest }) {
       )}
       {...rest}
     >
-      Let's gooo
+      Lets gooo
     </button>
   );
 }

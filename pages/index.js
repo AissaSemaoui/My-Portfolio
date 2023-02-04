@@ -45,9 +45,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <SecondaryButton className="py-2 px-6">
-                Let's Chat
-              </SecondaryButton>
+              <SecondaryButton className="py-2 px-6">Lets Chat</SecondaryButton>
             </div>
           </nav>
           <div className="hero relative w-full">
@@ -84,19 +82,19 @@ export default function Home() {
           <div className="about-content flex-1 flex flex-col  my-auto">
             <h2 className="mb-2">ABOUT ME</h2>
             <p className="font-regular mb-8 xl:mb-6">
-              I'm Aissa, a Frontend Developer with extensive experience in web
+              I am Aissa, a Frontend Developer with extensive experience in web
               development. I have a knack for creating projects from scratch,
               and have built several projects for both business and pleasure. My
               self-taught knowledge of web development has been cultivated
               through reading hundreds of blogs and watching countless videos.
-              This year, I've been working on a variety of projects, which I
+              This year, I have been working on a variety of projects, which I
               approach with creativity, organization, and enthusiasm for new
               technologies. <br /> <br /> I have a strong work ethic and am
               dedicated to continually improving my skills and knowledge. I am
               confident in providing clients with the best solutions for their
               web development needs.{" "}
             </p>
-            <SecondaryButton>let's discuss it</SecondaryButton>
+            <SecondaryButton>lets discuss it</SecondaryButton>
           </div>
         </div>
         <div className="skills section text-center">
@@ -120,7 +118,7 @@ export default function Home() {
         <div className="h-72 lg:h-80">
           <div className="h-72 lg:h-80 max-w-screen px-4 flex flex-col gap-8 justify-center items-center w-screen absolute left-1/2 -translate-x-1/2 text-center bg-blue-light">
             <h2 className="text-white max-md:text-3xl xl:text-6xl">
-              Let's get to work together&nbsp;!
+              Lets get to work together&nbsp;!
             </h2>
             <SecondaryButton className="text-dark hover:text-dark font-bold border-none px-8 lg:px-16 md:py-4 bg-gray-100 hover:bg-white active:bg-gray-100 shadow-sm active:shadow-none">
               Get in touch
