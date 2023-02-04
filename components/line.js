@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
+import { twMerge } from "tailwind-merge";
 
 function Line({ tailwindRotation = "-rotate-2", className, textClass }) {
   const lineRef = useRef(null);
@@ -12,31 +13,36 @@ function Line({ tailwindRotation = "-rotate-2", className, textClass }) {
   };
 
   useEffect(() => {
-    const moveLine = () => {
-      let limits = window.innerWidth;
-      console.log(limits);
-      let currentPosition = -limits;
-      setInterval(() => {
-        lineRef.current.style.left = `${currentPosition}px`;
-        currentPosition += 1;
-        if (currentPosition >= 0) {
-          currentPosition = -limits;
-        }
-      }, 10);
-    };
-    moveLine();
-    return clearInterval(() => {
+    const limits = window.innerWidth;
+    let animationFrame =
+      window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame;
+
+    let currentPosition = -limits;
+    const animate = () => {
       lineRef.current.style.left = `${currentPosition}px`;
       currentPosition += 1;
       if (currentPosition >= 0) {
         currentPosition = -limits;
       }
-    });
+      if (animationFrame) {
+        animationFrame(animate);
+      } else {
+        setTimeout(animate, 16);
+      }
+    };
+    requestAnimationFrame(animate);
   }, []);
 
   return (
     <div
-      className={`absolute z-10 translate-y-1/2 -translate-x-1/2 bottom-0 left-1/2 w-[105vw] h-20 bg-blue text-white ${tailwindRotation} ${className}`}
+      className={twMerge(
+        "absolute z-10 translate-y-1/2 -translate-x-1/2 bottom-0 left-1/2 w-[100vw] h-14 md:h-16 lg:h-20 bg-blue text-white overflow-x-hidden",
+        tailwindRotation,
+        className
+      )}
     >
       <div
         className="line-wrapper h-full w-[200vw] whitespace-nowrap gap-8 flex justify-between items-center"
@@ -44,7 +50,9 @@ function Line({ tailwindRotation = "-rotate-2", className, textClass }) {
       >
         {Array.from({ length: 20 }, fillLine).map((content) => {
           return (
-            <span className={`font-semibold text-2xl text-white ${textClass}`}>
+            <span
+              className={`font-semibold text-lg md:text-xl lg:text-2xl text-white ${textClass}`}
+            >
               {content}
             </span>
           );

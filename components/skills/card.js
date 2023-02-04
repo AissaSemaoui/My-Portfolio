@@ -4,28 +4,28 @@ function Skills() {
   const mainTechs = [
     {
       name: "HTML5",
-      img: require("../../assets/techs/html.png"),
+      img: "/content/techs/html.png",
       isMain: true,
     },
-    { name: "CSS3", img: require("../../assets/techs/css.png"), isMain: true },
+    { name: "CSS3", img: "/content/techs/css.png", isMain: true },
     {
       name: "JAVASCRIPT",
-      img: require("../../assets/techs/javascript.png"),
+      img: "/content/techs/javascript.png",
       isMain: true,
     },
     {
       name: "TAILWINDCSS",
-      img: require("../../assets/techs/tailwindcss.png"),
+      img: "/content/techs/tailwindcss.png",
       isMain: false,
     },
     {
       name: "REACT JS",
-      img: require("../../assets/techs/react.png"),
+      img: "/content/techs/react.png",
       isMain: false,
     },
     {
       name: "NEXT JS",
-      img: require("../../assets/techs/next.png"),
+      img: "/content/techs/next.png",
       isMain: false,
     },
   ];
@@ -33,23 +33,23 @@ function Skills() {
   const subTechs = [
     {
       name: "Webpack",
-      img: require("../../assets/techs/webpack.png"),
+      img: "/content/techs/webpack.png",
     },
     {
       name: "Bootsrap",
-      img: require("../../assets/techs/bootstrap.png"),
+      img: "/content/techs/bootstrap.png",
     },
     {
       name: "NPM",
-      img: require("../../assets/techs/npm.png"),
+      img: "/content/techs/npm.png",
     },
     {
       name: "Firebase",
-      img: require("../../assets/techs/firebase.png"),
+      img: "/content/techs/firebase.png",
     },
     {
       name: "Sass",
-      img: require("../../assets/techs/sass.png"),
+      img: "/content/techs/sass.png",
     },
   ];
 
@@ -65,7 +65,7 @@ function Skills() {
           />
         ))}
       </div>
-      <div className="flex gap-4 justify-center flex-wrap">
+      <div className="flex gap-2 lg:gap-6 justify-center flex-wrap">
         {subTechs.map((tech) => (
           <SecondaryCard name={tech.name} img={tech.img} key={tech.name} />
         ))}
@@ -77,12 +77,20 @@ function Skills() {
 export function PrimaryCard({ name, img, isMain }) {
   return (
     <div
-      className={`${
-        isMain ? "border border-gray-200 " : ""
-      } text-center w-48 p-4 rounded-md shadow-sm hover:shadow-md duration-75 bg-white`}
+      className={`
+       ${isMain ? "" : ""}
+       text-center w-36 py-2 lg:py-4 rounded-md shadow-sm hover:shadow-md duration-75 hover:bg-white `}
     >
-      <Image src={img} width={130} height={130} objectFit="contain" />
-      <h3>{name}</h3>
+      <div className=" w-20 lg:w-24 h-20  lg:h-24 mx-auto">
+        <Image
+          src={img}
+          layout="responsive"
+          width={96}
+          height={80}
+          objectFit="contain"
+        />
+      </div>
+      <h3 className="text-base lg:text-lg font-bold">{name}</h3>
     </div>
   );
 }
