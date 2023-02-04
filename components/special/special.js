@@ -22,6 +22,7 @@ function Special() {
     <div className="py-8">
       {specialContent.map((card) => (
         <SpecialCard
+          key={card.title}
           illustration={card.illustration}
           title={card.title}
           content={card.content}

@@ -61,6 +61,7 @@ function Project({ showProjectModal, setShowProjectModal }) {
               {techs.map((technology) => {
                 return (
                   <img
+                    key={technology}
                     src={technology}
                     alt="technology"
                     loading="lazy"
@@ -135,7 +136,7 @@ function Slider() {
           }}
         >
           {images.map((image, index) => (
-            <div className="relative h-full bg-slate-200 w-full">
+            <div key={index} className="relative h-full bg-slate-200 w-full">
               <div className="w-full h-full overflow-y-scroll">
                 <div className="h-full">
                   <Image

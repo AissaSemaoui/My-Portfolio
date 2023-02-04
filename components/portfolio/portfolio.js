@@ -83,8 +83,12 @@ function Portfolio({ setShowProjectModal }) {
 
   return (
     <Slider className="flex gap-6" draggable {...settings_3}>
-      {portfolio.map((work) => (
-        <WorkCard product={work} setShowProjectModal={setShowProjectModal} />
+      {portfolio.map((work, index) => (
+        <WorkCard
+          key={index}
+          product={work}
+          setShowProjectModal={setShowProjectModal}
+        />
       ))}
     </Slider>
   );
@@ -105,7 +109,7 @@ function WorkCard({ product, setShowProjectModal }) {
         <div className="justify-between">
           <div className="flex gap-2 pt-2">
             {techs.map((icon) => (
-              <span>
+              <span key={icon}>
                 <Image src={icon} height={30} width={30} />
               </span>
             ))}

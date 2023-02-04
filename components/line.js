@@ -48,9 +48,10 @@ function Line({ tailwindRotation = "-rotate-2", className, textClass }) {
         className="line-wrapper h-full w-[200vw] whitespace-nowrap gap-8 flex justify-between items-center"
         ref={lineRef}
       >
-        {Array.from({ length: 20 }, fillLine).map((content) => {
+        {Array.from({ length: 20 }, fillLine).map((content, index) => {
           return (
             <span
+              key={index}
               className={`font-semibold text-lg md:text-xl lg:text-2xl text-white ${textClass}`}
             >
               {content}
