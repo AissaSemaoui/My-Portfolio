@@ -79,9 +79,9 @@ export function PrimaryCard({ name, img, isMain }) {
     <div
       className={`
        ${isMain ? "" : ""}
-       text-center w-36 py-2 lg:py-4 rounded-md shadow-sm hover:shadow-md duration-75 hover:bg-white `}
+       text-center w-32 py-2 lg:py-4 rounded-md shadow-sm hover:shadow-md duration-75 hover:bg-white/40 `}
     >
-      <div className=" w-20 lg:w-24 h-20  lg:h-24 mx-auto">
+      <div className="w-20 lg:w-24 h-20  lg:h-24 mx-auto">
         <Image
           src={img}
           layout="responsive"
@@ -90,16 +90,16 @@ export function PrimaryCard({ name, img, isMain }) {
           objectFit="contain"
         />
       </div>
-      <h3 className="text-base lg:text-lg font-bold">{name}</h3>
+      <h3 className="text-base lg:text-lg font-medium">{name}</h3>
     </div>
   );
 }
 
 function SecondaryCard({ name, img }) {
   return (
-    <div className={` text-center p-4`}>
+    <div className={` text-center p-4 w-24`}>
       <Image src={img} width={80} height={80} objectFit="contain" />
-      <h4>{name}</h4>
+      <h4 className="text-base lg:text-lg font-medium">{name}</h4>
     </div>
   );
 }

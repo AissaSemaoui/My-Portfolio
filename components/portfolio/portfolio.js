@@ -100,7 +100,7 @@ function WorkCard({ product, setShowProjectModal }) {
   const handleOpen = () => setShowProjectModal({ state: true, data: product });
 
   return (
-    <div className="left-0 p-2 lg:p-4 text-left w-[330px] max-w-[95%] h-full border-blue-light/20 hover:border-red bg-gray-100 border cursor-pointer">
+    <div className="left-0 p-2 lg:p-4 text-left w-[330px] max-w-[95%] h-full border-blue-light/20 hover:border-blue-light/50 bg-gray-100 border cursor-pointer">
       <div className="relative h-40 overflow-hidden">
         <Image src={images[0]} objectFit="cover" layout="fill" />
       </div>

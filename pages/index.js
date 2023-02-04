@@ -34,12 +34,12 @@ export default function Home() {
       </Head>
 
       <main className="container">
-        <header className="mb-32">
+        <header className="section ">
           <nav className="navbar w-full flex justify-between py-8">
-            <div className="logo w-32">
+            <div className="logo w-24 lg:w-32">
               <Image
                 src="/content/staticImages/logo.png"
-                layout="intrinsic"
+                layout="responsive"
                 width="152px"
                 height="54px"
               />
@@ -48,7 +48,7 @@ export default function Home() {
               <SecondaryButton className="py-2 px-6">Lets Chat</SecondaryButton>
             </div>
           </nav>
-          <div className="hero relative w-full">
+          <div className="hero relative w-full pt-4">
             <div className="hero-wrapper relative h-full w-full flex flex-col xl:flex-row justify-around gap-4 items-center text-center xl:text-left">
               <div className="hero-content xl:w-1/2">
                 <div className="xl:w-1/2 2xl:w-2/3 z-10 xl:absolute left-0 top-1/2 xl:-translate-y-1/2">
@@ -60,8 +60,8 @@ export default function Home() {
               </div>
               <div className="hero-image relative">
                 <Tilt transitionSpeed={800}>
-                  <div className="absolute left-1/2 bottom-0 -translate-x-1/2 bg-gray-200 h-[400px] xl:h-[550px] w-[600px] xl:w-[600px]"></div>
-                  <div className="heroImage h-[500px] xl:h-[600px] w-[600px] xl:w-[700px]">
+                  <div className="absolute left-1/2 bottom-0 -translate-x-1/2 bg-gray-200 h-[250px] md:h-[350px] xl:h-[550px] w-[350px] md:w-[450px] xl:w-[600px]"></div>
+                  <div className="heroImage h-[300px] md:h-[400px] xl:h-[600px] w-[400px] md:w-[500px] xl:w-[700px]">
                     <Image
                       src="/content/staticImages/me-hero.png"
                       layout="fill"
@@ -75,7 +75,7 @@ export default function Home() {
             <Line />
           </div>
         </header>
-        <div className="about-me section flex gap-8 mt-24">
+        <div className="about-me section flex gap-8 mt-16 md:mt-24">
           <div className="w-1/3 max-xl:hidden">
             <img src="/content/staticImages/about-me.png" layout="responsive" />
           </div>
@@ -131,12 +131,12 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col-reverse gap-4 md:flex-row -z-10 items-center justify-center md:justify-around pt-4 h-44 w-screen absolute left-1/2 -translate-x-1/2 bg-blue ">
-          <div className="logo w-32">
+          <div className="logo w-24 lg:w-32">
             <Image
               src="/content/staticImages/logoWhite.png"
+              layout="responsive"
               width="152px"
               height="54px"
-              layout="responsive"
             />
           </div>
           <nav className="flex gap-4">

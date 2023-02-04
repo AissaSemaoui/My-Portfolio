@@ -21,7 +21,7 @@
 /* ---------------------------------- Text sizes --------------------------------- */
 
 h1 {
-  font-size: 80px;
+  font-size: 72px;
   line-height: 1.2 !important;
   font-weight: 900;
   /* font-weight: bolder; */
@@ -91,19 +91,22 @@ body {
 
 @media only screen and (max-width: 1280px) {
   h1 {
-    font-size: 72px;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  h1 {
     font-size: 64px;
   }
   h2 {
     font-size: 32px;
   }
+}
+
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 56px;
+  }
+  h2 {
+    font-size: 32px;
+  }
   .section {
-    margin-bottom: 100px;
+    margin-bottom: 70px;
   }
 }
 
@@ -112,16 +115,19 @@ body {
     padding: 0 10px;
   }
   .section {
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
   h1 {
-    font-size: 56px;
+    font-size: 40px;
   }
   h2 {
     font-size: 24px;
   }
   h3 {
     font-size: 18px;
+  }
+  h4 {
+    font-size: 16px;
   }
   p {
     font-size: 16px;
@@ -130,7 +136,7 @@ body {
 
 @media only screen and (max-width: 560px) {
   h1 {
-    font-size: 44px;
+    font-size: 32px;
   }
 }
 
