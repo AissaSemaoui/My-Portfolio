@@ -35,7 +35,7 @@ export default function Home() {
 
       <main className="container">
         <header className="section ">
-          <nav className="navbar w-full flex justify-between py-8">
+          <nav className="navbar w-full flex justify-between py-2 md:py-4 lg:py-8">
             <div className="logo w-24 lg:w-32">
               <Image
                 src="/content/staticImages/logo.png"
