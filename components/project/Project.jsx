@@ -158,13 +158,13 @@ function Slider() {
           className="bg-gray-600 p-2 rounded-full hover:bg-gray-700 focus:outline-none"
           onClick={() => handleClick("prev")}
         >
-          &larr; <span className="text-xs text-white">Prev</span>
+          &larr;
         </button>
         <button
           className="bg-gray-600 p-2 rounded-full hover:bg-gray-700 focus:outline-none"
           onClick={() => handleClick("next")}
         >
-          <span className="text-xs text-white">Next</span> &rarr;
+          &rarr;
         </button>
       </div>
     </div>

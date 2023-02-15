@@ -5,7 +5,6 @@ function Line({ tailwindRotation = "-rotate-2", className, textClass }) {
   const lineRef = useRef(null);
 
   const fillLine = (e, index) => {
-    console.log(index % 2 === 0);
     if (index % 2 === 0) {
       return "SEMAOUI AISSA";
     }
