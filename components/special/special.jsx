@@ -53,6 +53,7 @@ function SpecialCard({ illustration, title, content, isReverse }) {
           height={400}
           layout="responsive"
           objectFit="contain"
+          alt="illustration"
         />
       </div>
     </div>

@@ -102,7 +102,7 @@ function WorkCard({ product, setShowProjectModal }) {
   return (
     <div className="left-0 p-2 lg:p-4 text-left w-[330px] max-w-[95%] h-full border-blue-light/20 hover:border-blue-light/50 bg-gray-100 border cursor-pointer">
       <div className="relative h-40 overflow-hidden">
-        <Image src={images[0]} objectFit="cover" layout="fill" />
+        <Image src={images[0]} objectFit="cover" layout="fill" alt={title} />
       </div>
       <div>
         <h3 className="mt-2 max-md:leading-none max-md:py-1">{title}</h3>
@@ -110,7 +110,12 @@ function WorkCard({ product, setShowProjectModal }) {
           <div className="flex gap-2 pt-2">
             {techs.map((icon) => (
               <span key={icon}>
-                <Image src={icon} height={30} width={30} />
+                <Image
+                  src={icon}
+                  height={30}
+                  width={30}
+                  alt="Used technologies"
+                />
               </span>
             ))}
           </div>

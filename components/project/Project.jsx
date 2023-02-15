@@ -145,6 +145,7 @@ function Slider() {
                     objectFit="cover"
                     objectPosition="center"
                     className="w-full h-full"
+                    alt="Project overview"
                   />
                 </div>
               </div>

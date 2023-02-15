@@ -50,6 +50,7 @@ export default function Home() {
                 layout="responsive"
                 width="152px"
                 height="54px"
+                alt="My logo"
               />
             </div>
             <div>
@@ -85,6 +86,7 @@ export default function Home() {
                       layout="fill"
                       objectFit="contain"
                       className=""
+                      alt="Personal image"
                     />
                   </div>
                 </Tilt>
@@ -164,6 +166,7 @@ export default function Home() {
               layout="responsive"
               width="152px"
               height="54px"
+              alt="My logo"
             />
           </div>
           <nav className="flex gap-4">

@@ -88,6 +88,7 @@ export function PrimaryCard({ name, img, isMain }) {
           width={96}
           height={80}
           objectFit="contain"
+          alt={name}
         />
       </div>
       <h3 className="text-base lg:text-lg font-medium">{name}</h3>
@@ -98,7 +99,7 @@ export function PrimaryCard({ name, img, isMain }) {
 function SecondaryCard({ name, img }) {
   return (
     <div className={` text-center p-4 w-24`}>
-      <Image src={img} width={80} height={80} objectFit="contain" />
+      <Image src={img} width={80} height={80} objectFit="contain" alt={name} />
       <h4 className="text-base lg:text-lg font-medium">{name}</h4>
     </div>
   );
