@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import PrimaryButton, { SecondaryButton } from "../components/button/button";
-import styles from "../styles/Home.module.css";
 import "animate.css";
 
 //? Import from Libraries
@@ -28,6 +27,16 @@ export default function Home() {
   });
 
   useEffect(() => {
+    fetch("/api/refferer", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ refferer: document.referrer }),
+    })
+      .then((res) => console.log("successfully"))
+      .catch((err) => console.log("failed"));
+
     let eventId = window.addEventListener("scroll", animateOnScroll);
     console.log(eventId);
     return () => window.removeEventListener("scroll", eventId);
