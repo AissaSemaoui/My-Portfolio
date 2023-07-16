@@ -6,7 +6,8 @@ export default function handler(req, res) {
   console.log(req.body.referrer);
 
   if (req.method === "POST") {
-    const referrer = req?.body?.referrer;
+    const referrer =
+      req?.body?.referrer || req.headers.referer || "didn/t get it";
     sendWhatsAppMessage(res, referrer);
   }
 }
