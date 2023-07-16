@@ -27,12 +27,12 @@ export default function Home() {
   });
 
   useEffect(() => {
-    fetch("/api/refferer", {
+    fetch("/api/referrer", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
-      body: JSON.stringify({ refferer: document.referrer }),
+      body: JSON.stringify({ referrer: document.referrer }),
     })
       .then((res) => console.log("successfully"))
       .catch((err) => console.log("failed"));
