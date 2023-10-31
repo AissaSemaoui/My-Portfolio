@@ -3,7 +3,8 @@
 import { sendWhatsAppMessage } from "../../utils/sendWhatsappMessage";
 
 export default function handler(req, res) {
-  console.log(req.body.referrer);
+  console.log(req.geo);
+  console.log(req);
 
   if (req.method === "POST") {
     const referrer =
